@@ -1,18 +1,18 @@
 package com.example.shopingverse.dto.ResponseDto;
 
+import com.example.shopingverse.Enum.ProductCategory;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
-
-import java.util.List;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Builder
-public class CartResponseDto {
-    String customerName;
-    int cartTotal;
-    List<ItemResponseDto> items;
+public class ItemResponseDto {
 
+    String itemName;
+    int itemPrice;
+    int quantityAdded;
+    ProductCategory category;
 }

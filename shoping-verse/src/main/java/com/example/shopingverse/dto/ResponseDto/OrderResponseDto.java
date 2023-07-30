@@ -2,7 +2,9 @@ package com.example.shopingverse.dto.ResponseDto;
 
 import lombok.*;
 import lombok.experimental.FieldDefaults;
+import org.hibernate.annotations.CreationTimestamp;
 
+import java.util.Date;
 import java.util.List;
 
 @Data
@@ -10,9 +12,17 @@ import java.util.List;
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Builder
-public class CartResponseDto {
-    String customerName;
-    int cartTotal;
-    List<ItemResponseDto> items;
+public class OrderResponseDto {
 
+    String orderId;  // UUID
+
+    Date orderDate;
+
+    String cardUsed;
+
+    int orderTotal;
+
+    String customerName;
+
+    List<ItemResponseDto> item;
 }
